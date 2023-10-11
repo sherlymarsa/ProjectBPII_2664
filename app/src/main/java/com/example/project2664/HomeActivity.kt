@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,9 +15,30 @@ class HomeActivity : AppCompatActivity() {
 
         //    instance
         val btnBook: Button = findViewById(R.id.menu1)
+        val btnMore: Button = findViewById(R.id.menu4)
+        val rvBuku: RecyclerView = findViewById(R.id.recycleViewBook)
 
-        //        event saat button Fairy diklik
-        val intentBookKidActivity = Intent(this,BookKidActivity::class.java)
-        startActivity(intentBookKidActivity)
+//        Set layout manager di RecycleView
+        rvBuku.layoutManager = LinearLayoutManager(this)
+//            List data buku
+        val data = ArrayList<BukuModel>()
+        data.add(BukuModel(R.drawable.book1,"Emi's Beach Adventure",
+        "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book2,"Ade's Beach Adventure",
+            "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book4,"Mermaid Beach Adventure",
+            "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+
+//        set adapter
+        val adapter = AdapterHome(data)
+//        set adapater ke recycle view
+        rvBuku.adapter = adapter
+
+
+//               event saat button Fairy diklik
+        val btnBook = Intent(this,BookKidActivity::class.java)
+        startActivity(btnBook)
+        val btnMore = Intent(this,AboutActivity::class.java)
+        startActivity(btnMore)*/
     }
 }
