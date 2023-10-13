@@ -44,6 +44,7 @@
             android:layout_marginRight="50dp"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
+            android:textColor="@color/white"
             android:inputType="text"
             android:hint="Username"
             android:textColorHint="#ffff"
@@ -59,6 +60,7 @@
             android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:inputType="textPassword"
+            android:textColor="@color/white"
             android:hint="Password"
             android:textColorHint="#ffff"  />
 

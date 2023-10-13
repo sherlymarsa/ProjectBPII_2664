@@ -16,6 +16,7 @@ class HomeActivity : AppCompatActivity() {
         //    instance
         val btnBook: Button = findViewById(R.id.menu1)
         val btnMore: Button = findViewById(R.id.menu4)
+        val btnReading: Button = findViewById(R.id.menu2)
         val rvBuku: RecyclerView = findViewById(R.id.recycleViewBook)
 
 //        Set layout manager di RecycleView
@@ -35,10 +36,20 @@ class HomeActivity : AppCompatActivity() {
         rvBuku.adapter = adapter
 
 
-//               event saat button Fairy diklik
-        val btnBook = Intent(this,BookKidActivity::class.java)
-        startActivity(btnBook)
-        val btnMore = Intent(this,AboutActivity::class.java)
-        startActivity(btnMore)*/
+//        event saat button Fairy diklik
+        btnBook.setOnClickListener{
+            val intentBookKidActivity = Intent(this,BookKidActivity::class.java)
+            startActivity(intentBookKidActivity)
+        }
+
+        btnReading.setOnClickListener{
+            val intentReadingActivity = Intent(this,ReadingActivity::class.java)
+            startActivity(intentReadingActivity)
+        }
+
+        btnMore.setOnClickListener {
+            val intentAboutActivity = Intent(this,AboutActivity::class.java)
+            startActivity(intentAboutActivity)
+        }
     }
 }
