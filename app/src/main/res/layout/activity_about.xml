@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#673AB7"
+    android:background="#fe7e07"
     tools:context=".AboutActivity">
 
     <LinearLayout
@@ -44,7 +44,7 @@
             android:layout_height="67dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Perpustakaan Anas adalah perpustakaan dengan buku terlengkap yang ada didunia,dengan jumlah buku sekitar 170 ribu buku yang ada." />
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " />
 
         <TextView
             android:id="@+id/textView9"

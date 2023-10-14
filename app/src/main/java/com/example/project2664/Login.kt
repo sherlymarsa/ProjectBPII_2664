@@ -6,7 +6,7 @@ class Login {
 
 
     fun loginCheck():Boolean{
-        if(username.equals("anas") && password.equals("ipin")){
+        if(username.equals("marsa") && password.equals("1234")){
             return true
         }else{
             return false

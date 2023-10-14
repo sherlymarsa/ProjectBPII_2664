@@ -19,12 +19,18 @@ class HomeActivity : AppCompatActivity() {
         val btnReading: Button = findViewById(R.id.menu2)
         val rvBuku: RecyclerView = findViewById(R.id.recycleViewBook)
 
-//        Set layout manager di RecycleView
+        //      Set layout manager di RecycleView
         rvBuku.layoutManager = LinearLayoutManager(this)
 //            List data buku
         val data = ArrayList<BukuModel>()
         data.add(BukuModel(R.drawable.book1,"Emi's Beach Adventure",
         "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book2,"Ade's Beach Adventure",
+            "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book4,"Mermaid Beach Adventure",
+            "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book1,"Emi's Beach Adventure",
+            "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
         data.add(BukuModel(R.drawable.book2,"Ade's Beach Adventure",
             "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
         data.add(BukuModel(R.drawable.book4,"Mermaid Beach Adventure",

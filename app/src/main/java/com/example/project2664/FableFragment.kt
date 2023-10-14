@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,13 +31,37 @@ class FableFragment : Fragment() {
         }
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fable, container, false)
+        val view = inflater.inflate(R.layout.fragment_fable, container, false)
+        val rvBuku: RecyclerView = view.findViewById(R.id.recycleViewBook)
+
+        // Set layout manager di RecyclerView
+        rvBuku.layoutManager = LinearLayoutManager(requireContext())
+
+        // List data buku
+        val data = ArrayList<BukuModel>()
+        data.add(BukuModel(R.drawable.book5, "Read Around The World", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book6, "In Your Own Backyard", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book7, "Sam and Pam", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book8, "Journey In The Stars", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book9, "The girls Who Said No!", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book10, "Mermaid Beach Adventure", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+
+        //        set adapter
+        val adapter = AdapterFragmentFable(data)
+//        set adapater ke recycle view
+        rvBuku.adapter = adapter
+
+        return view
+
     }
+
+
 
     companion object {
         /**

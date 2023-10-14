@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#186F65"
+        android:backgroundTint="#ff9be3"
         android:text="Fairy Tale"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -36,9 +36,9 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#1AACAC"
+        android:backgroundTint="#68fff6"
         android:text="Fable"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonScience"
         app:layout_constraintStart_toEndOf="@+id/buttonFairy" />
@@ -49,9 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#79AC78"
+        android:backgroundTint="#ffe484"
         android:text="Science"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

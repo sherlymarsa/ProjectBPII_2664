@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,27 @@ class ScienceFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_science, container, false)
+        val view = inflater.inflate(R.layout.fragment_science, container, false)
+        val rvBuku: RecyclerView = view.findViewById(R.id.recycleViewBook)
+
+        // Set layout manager di RecyclerView
+        rvBuku.layoutManager = LinearLayoutManager(requireContext())
+
+        // List data buku
+        val data = ArrayList<BukuModel>()
+        data.add(BukuModel(R.drawable.book17, "How Does IT Work", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book18, "Activity Book For Kids", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book19, "How Big", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book20, "Can We Really Help the Planet", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book21, "Happy Things", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book22, "Smiley Happy Planet Earth", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+
+        //        set adapter
+        val adapter = AdapterFragmentScience(data)
+//        set adapater ke recycle view
+        rvBuku.adapter = adapter
+
+        return view
     }
 
     companion object {

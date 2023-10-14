@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,27 @@ class FairyFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fairy, container, false)
+        val view = inflater.inflate(R.layout.fragment_fairy, container, false)
+        val rvBuku: RecyclerView = view.findViewById(R.id.recycleViewBook)
+
+        // Set layout manager di RecyclerView
+        rvBuku.layoutManager = LinearLayoutManager(requireContext())
+
+        // List data buku
+        val data = ArrayList<BukuModel>()
+        data.add(BukuModel(R.drawable.book11, "When Do Hippos Play", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book12, "Charlottes Web'", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book13, "Good Habits", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book14, "Good HabitsII", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book15, "Good Habits For Kids", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+        data.add(BukuModel(R.drawable.book16, "The Calm Work Book", "Lorem ipsum Dolor sit amet Lorem ipsum dolor sit amet"))
+
+        //        set adapter
+        val adapter = AdapterFragmentFairy(data)
+//        set adapater ke recycle view
+        rvBuku.adapter = adapter
+
+        return view
     }
 
     companion object {

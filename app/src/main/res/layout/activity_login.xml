@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#D5A428"
+    android:background="#fe7e07"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -72,7 +72,7 @@
             android:layout_marginTop="32dp"
             android:backgroundTint="#FFFFFF"
             android:text="LOGIN"
-            android:textColor="#673AB7"
+            android:textColor="#fe7e07"
             android:textSize="16sp"
             android:textStyle="bold" />
 
